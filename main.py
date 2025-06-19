@@ -55,7 +55,7 @@ async def notify_telegram(message: str):
 async def main_loop():
     global EXPECTED  # чтобы обновлять переменную из внешнего скоупа
 
-    print("Бот запущен. Нажми Ctrl+C чтобы остановить.")
+    print("Бот запущен. Нажми Ctrl+C чтобы остановить.", TELEGRAM_TOKEN, CHAT_ID)
     await  notify_telegram("Бот запущен")
     async with httpx.AsyncClient(timeout=10) as client:
         while True:
