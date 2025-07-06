@@ -55,6 +55,7 @@ async def main_loop():
     global EXPECTED  # чтобы обновлять переменную из внешнего скоупа
 
     await  notify_telegram("Бот запущен")
+    print("Бот запущен", TELEGRAM_TOKEN, CHAT_ID)
     async with httpx.AsyncClient(timeout=10) as client:
         while True:
             try:
